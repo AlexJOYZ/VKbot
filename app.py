@@ -41,7 +41,7 @@ def main_loop():
             user_id = event.user_id
             if (isFlag and isAnswer and request.startswith('стоп')):
                 prompt = f"Составьте вопросы, которые будут проверять усвоенную информацию из темы '{topic}', используя в качестве источника информации следующий текст:\n\n{text}\n\n"
-                send_message_to_VK(user_id, 'Проверьте свои знания и ответьте на вопросы')
+                send_message_to_VK(user_id, 'Проверьте свои знания и ответьте на вопросы (ВСЕ ОТВЕТЫ НА ВОПРОСЫ ДОЛЖНЫ БЫТЬ В ОДНОМ СООБЩЕНИИ!)')
                 answers = send_message_to_AI(user_id,prompt)
                 res = request
                 isAnswer=False
